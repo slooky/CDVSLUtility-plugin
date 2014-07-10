@@ -13,11 +13,11 @@ var cdvslutility = {
             'CDVSLUtility', // mapped to our native Java class called "CDSLUtility"
             'openExternalURL', // with this action name
             [                 // and this object of custom arguments
-                "url": url,
-                "title": title,
-                "message": message,
-                "positiveButtonTitle": positiveButtonTitle,
-                "negativeButtonTitle": negativeButtonTitle
+                url,
+                title,
+                message,
+                positiveButtonTitle,
+                negativeButtonTitle
             ]
         );
 	}
