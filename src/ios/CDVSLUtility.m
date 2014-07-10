@@ -11,9 +11,10 @@
 
 @implementation CDVSLUtility
 
-- (void)openExternalURL:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
+- (void)openExternalURL:(CDVInvokedUrlCommand*)command {
     //get the callback id
-    NSString *callbackId = [arguments pop];
+    NSString    *callbackId = command.callbackId;
+    NSLog(@"CDVSLUtility - openExternalURL %@", command.arguments);
     
     NSString *resultType = [arguments objectAtIndex:0];
     CDVPluginResult *result;

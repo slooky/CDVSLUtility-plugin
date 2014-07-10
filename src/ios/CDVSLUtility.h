@@ -14,6 +14,6 @@
 
 @interface CDVSLUtility : CDVPlugin
 
-- (void)openExternalURL:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void)openExternalURL:(CDVInvokedUrlCommand*)command;
 
 @end
