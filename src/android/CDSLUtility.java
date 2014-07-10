@@ -5,6 +5,9 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 public class CDSLUtility extends CordovaPlugin {
@@ -16,6 +19,37 @@ public class CDSLUtility extends CordovaPlugin {
 		try {
 			if (OEPN_EXTERNAL_URL.equals(action)) { 
 				JSONObject arg_object = args.getJSONObject(0);
+				
+				final CallbackContext callbackContextFin = callbackContext;
+				
+				AlertDialog.Builder builder = new AlertDialog.Builder(this.cordova.getActivity());
+				builder.setTitle(arg_object.getString("title"));
+				builder.setMessage(arg_object.getString("message"));
+				
+				builder.setPositiveButton(arg_object.getString("positiveButtonTitle"), new DialogInterface.OnClickListener() {
+
+			        public void onClick(DialogInterface dialog, int which) {
+			            // Do nothing but close the dialog
+			        	callbackContextFin.success(1);
+			            dialog.dismiss();
+			        }
+
+			    });
+				
+				builder.setNegativeButton(arg_object.getString("negativeButtonTitle"), new DialogInterface.OnClickListener() {
+
+			        @Override
+			        public void onClick(DialogInterface dialog, int which) {
+			            // Do nothing
+			        	callbackContextFin.error(0);
+			            dialog.dismiss();
+			        }
+			    });
+				
+				AlertDialog alert = builder.create();
+			    alert.show();
+				
+			    /*
 				Intent calIntent = new Intent(Intent.ACTION_EDIT)
 				.setType("vnd.android.cursor.item/event")
 				.putExtra("beginTime", arg_object.getLong("startTimeMillis"))
@@ -25,7 +59,7 @@ public class CDSLUtility extends CordovaPlugin {
 				.putExtra("eventLocation", arg_object.getString("eventLocation"));
 			
 				this.cordova.getActivity().startActivity(calIntent);
-				callbackContext.success();
+				*/
 				return true;
 			}
 			callbackContext.error("Invalid action");
