@@ -7,13 +7,15 @@
     <description>Utility functions</description>
     <license>Copyright 2014 SLOOKY LLC</license>
     <keywords>phonegap,utility,slooky</keywords>
+    <repo>https://github.com/slooky/CDVSLUtility-plugin.git</repo>
+    <issue>https://github.com/slooky/CDVSLUtility-plugin/issues</issue>
     
     <engines>
         <engine name="cordova" version=">=3.0.0" />
     </engines>
     
     <js-module src="www/cdvslutility.js" name="CDSLUtility">
-        <clobbers target="window.utility" />
+        <clobbers target="CDVSLUtility" />
     </js-module>
     
     <!-- android -->
