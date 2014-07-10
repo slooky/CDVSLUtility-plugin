@@ -7,12 +7,16 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import <Cordova/CDVPlugin.h>
 #import <Cordova/CDVJSON.h>
 
 
-@interface CDVSLUtility : CDVPlugin
+@interface CDVSLUtility : CDVPlugin <UIAlertViewDelegate>
+
+@property (strong) NSString *callbackId;
+@property (strong) NSURL *urlToOpen;
 
 - (void)openExternalURL:(CDVInvokedUrlCommand*)command;
 

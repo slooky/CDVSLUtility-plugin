@@ -1,4 +1,4 @@
-/*
+cordova.define("co.slooky.plugins.CDSLUtility", function(require, exports, module) { /*
  *
  * Copyright 2014 SLOOKY LLC
  * http://slooky.co
@@ -23,3 +23,4 @@ var cdvslutility = {
 	}
 }
 module.exports = cdvslutility;
+});
