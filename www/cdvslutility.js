@@ -1,9 +1,9 @@
-var cdslutility = {
+var cdvslutility = {
 	openExternalURL : function (url, title, message, positiveButtonTitle, negativeButtonTitle, successCallback, errorCallback) {
 		cordova.exec(
             successCallback, // success callback function
             errorCallback, // error callback function
-            'CDSLUtility', // mapped to our native Java class called "CDSLUtility"
+            'CDVSLUtility', // mapped to our native Java class called "CDSLUtility"
             'openExternalURL', // with this action name
             [{                  // and this array of custom arguments
                 "url": url,
@@ -15,4 +15,4 @@ var cdslutility = {
         );
 	}
 }
-module.exports = cdslutility;
+module.exports = cdvslutility;

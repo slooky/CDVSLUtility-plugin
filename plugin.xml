@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     id="co.slooky.plugins"
     version="0.1.0">
-    <name>Utility</name>
+    <name>CDVSLUtility</name>
     <description>Utility functions</description>
     <license>Copyright 2014 SLOOKY LLC</license>
     <keywords>phonegap,utility,slooky</keywords>
@@ -12,7 +12,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
     
-    <js-module src="www/cdslutility.js" name="CDSLUtility">
+    <js-module src="www/cdvslutility.js" name="CDSLUtility">
         <clobbers target="window.utility" />
     </js-module>
     
@@ -20,24 +20,24 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Utility">
-                <param name="android-package" value="co.slooky.plugins.CDSLUtility"/>
+                <param name="android-package" value="co.slooky.plugins.CDVSLUtility"/>
             </feature>
         </config-file>
         
-        <source-file src="src/android/CDSLUtility.java" target-dir="src/co/slooky/plugins/" />
+        <source-file src="src/android/CDVSLUtility.java" target-dir="src/co/slooky/plugins/" />
     </platform>
     
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="CDSLUtility">
-                <param name="ios-package" value="CDSLUtility" />
+            <feature name="CDVSLUtility">
+                <param name="ios-package" value="CDVSLUtility" />
             </feature>
         </config-file>
         
         <!-- Note: the ios src is based off src/ios implicitly -->
-        <header-file src="src/ios/CDSLUtility.h" />
-        <source-file src="src/ios/CDSLUtility.m" />
+        <header-file src="src/ios/CDVSLUtility.h" />
+        <source-file src="src/ios/CDVSLUtility.m" />
     </platform>
 
 </plugin>

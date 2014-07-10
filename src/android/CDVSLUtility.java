@@ -10,7 +10,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 
-public class CDSLUtility extends CordovaPlugin {
+public class CDVSLUtility extends CordovaPlugin {
 
 	public static final String OEPN_EXTERNAL_URL = "openExternalURL";
 	

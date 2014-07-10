@@ -6,10 +6,10 @@
  * See http://opensource.org/licenses/alphabetical for full text.
  */
 
-#import "CDSLUtility.h"
+#import "CDVSLUtility.h"
 #include <regex.h>
 
-@implementation CDSLUtility
+@implementation CDVSLUtility
 
 - (void)openExternalURL:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options {
     //get the callback id

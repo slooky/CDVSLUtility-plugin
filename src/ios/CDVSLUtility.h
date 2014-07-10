@@ -12,7 +12,7 @@
 #import <Cordova/CDVJSON.h>
 
 
-@interface CDSLUtility : CDVPlugin
+@interface CDVSLUtility : CDVPlugin
 
 - (void)openExternalURL:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
