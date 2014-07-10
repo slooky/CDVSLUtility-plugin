@@ -5,6 +5,9 @@
     version="0.1.0">
     <name>CDVSLUtility</name>
     <description>Utility functions</description>
+    <author email="info@slooky.co" href="http://slooky.co">
+        SLOOKY combines design, technology and strategy to help brands build engaging websites and applications.
+    </author>
     <license>Copyright 2014 SLOOKY LLC</license>
     <keywords>phonegap,utility,slooky</keywords>
     <repo>https://github.com/slooky/CDVSLUtility-plugin.git</repo>
