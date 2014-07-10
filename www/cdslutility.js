@@ -3,9 +3,9 @@ var cdslutility = {
 		cordova.exec(
             successCallback, // success callback function
             errorCallback, // error callback function
-            'Utility', // mapped to our native Java class called "Calendar"
+            'CDSLUtility', // mapped to our native Java class called "CDSLUtility"
             'openExternalURL', // with this action name
-            [{                  // and this array of custom arguments to create our entry
+            [{                  // and this array of custom arguments
                 "url": url,
                 "title": title,
                 "message": message,
